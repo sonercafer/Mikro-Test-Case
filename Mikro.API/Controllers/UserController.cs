@@ -1,12 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Mikro.API.Abstraction;
-using Mikro.API.ViewModels;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Net.Http.Headers;
+using Mikro.API.ViewModels; 
 using System.Threading.Tasks;
 
 namespace Mikro.API.Controllers
@@ -16,15 +11,19 @@ namespace Mikro.API.Controllers
     public class UserController : ControllerBase
     {
         private readonly IRequestService _requestService;
-        public UserController(IRequestService requestService)
+        private readonly ILogger<UserController> _logger;
+        
+        public UserController(IRequestService requestService, ILogger<UserController> logger)
         {
             _requestService = requestService;
+            _logger = logger;
         }
         [HttpGet("get")]
         public async Task<IActionResult> Get()
         {
             string url = "https://dummyapi.io/data/v1/user?limit=10";
             var data = await _requestService.GetAsync<UserViewModel>(url);
+            _logger.LogInformation("UserList method end.");
             return Ok(data);
         }
     }

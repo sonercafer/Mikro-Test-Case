@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Mikro.API.Abstraction;
 using Mikro.API.Models.Login;
 using System;
@@ -11,10 +12,10 @@ namespace Mikro.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class LoginController : ControllerBase
+    public class AuthController : ControllerBase
     {
-        private readonly ILoginService _loginService;
-        public LoginController(ILoginService loginService)
+        private readonly ILoginService _loginService; 
+        public AuthController(ILoginService loginService)
         {
             _loginService = loginService;
         }
