@@ -1,9 +1,5 @@
 ﻿using Mikro.API.Models.Login;
-using Mikro.API.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Mikro.API.ViewModels; 
 
 namespace Mikro.API.Abstraction
 {

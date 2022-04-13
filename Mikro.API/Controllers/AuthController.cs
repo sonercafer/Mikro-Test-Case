@@ -25,9 +25,9 @@ namespace Mikro.API.Controllers
             var loginResponse = _loginService.Login(request);
             if (loginResponse.Id != 0)
             {
-                return Ok(loginResponse);
+                return Ok(new LoginResponse { isSuccess = true, Token = "" });
             }
-            return NoContent();
+            return Ok(new LoginResponse { isSuccess = false, Token = "" });
         }
     }
 }

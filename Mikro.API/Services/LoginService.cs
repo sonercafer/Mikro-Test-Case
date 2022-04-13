@@ -1,11 +1,9 @@
 ﻿using Mikro.API.Abstraction;
 using Mikro.API.Entities;
 using Mikro.API.Models.Login;
-using Mikro.API.ViewModels;
-using System;
+using Mikro.API.ViewModels; 
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Linq; 
 
 namespace Mikro.API.Services
 {

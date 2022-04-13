@@ -1,10 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
-using Mikro.API.Abstraction;
-using Mikro.API.ViewModels;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Mikro.API.Abstraction; 
+using Newtonsoft.Json; 
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;

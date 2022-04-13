@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Mikro.API.Abstraction;
+using Mikro.API.Entities;
 using Mikro.API.ViewModels; 
 using System.Threading.Tasks;
 
